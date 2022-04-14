@@ -8,6 +8,7 @@ const { SimpleSpanProcessor, ConsoleSpanExporter } = require('@opentelemetry/sdk
 const { JaegerExporter } = require('@opentelemetry/exporter-jaeger');
 const { HttpInstrumentation } = require('@opentelemetry/instrumentation-http');
 const { ExpressInstrumentation } = require('@opentelemetry/instrumentation-express');
+const { GrpcInstrumentation } = require('@opentelemetry/instrumentation-grpc');
 
 module.exports = (serviceName) => {
 	const provider = new NodeTracerProvider({
@@ -28,6 +29,7 @@ module.exports = (serviceName) => {
 		instrumentations: [
 			new HttpInstrumentation(),
 			new ExpressInstrumentation(),
+			new GrpcInstrumentation(),
 		],
 	});
 };
