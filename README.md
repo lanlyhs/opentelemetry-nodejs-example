@@ -3,7 +3,7 @@
 - [ ] Tracing
     - [ ] Nodejs [cls](https://medium.com/@apechkurov/request-id-tracing-in-node-js-applications-c517c7dab62d) pass traceId
     - [ ] Service add child span
-    - [ ] HTTP
+    - [x] HTTP
     - [ ] Grpc
     - [ ] Mongodb
     - [ ] Redis
