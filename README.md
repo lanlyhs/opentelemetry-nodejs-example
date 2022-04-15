@@ -14,13 +14,16 @@
 ## Quick Start
 
 ```sh
+# run instrumentations jaeger mongodb redis
+docker-compose up
+
 # start serverA and serverB
 npm run start
 
 # Call http api
 curl http://localhost:8080/grpc
 
-# Visit Jaeger UI http://localhost:16686/
+# Visit tracing in Jaeger UI http://localhost:16686/
 ```
 
 ## References
