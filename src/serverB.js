@@ -23,6 +23,7 @@ const impl = {
 
         callback(null, HelloReply.fromPartial({
             message: JSON.stringify({
+                message: `Hello World ${call.request.name}`,
                 insertResult,
                 queryResult,
             }),

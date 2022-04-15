@@ -1,12 +1,12 @@
 # OpenTelemetry Nodejs Example
 
 - [ ] Tracing
-    - [ ] Nodejs [cls](https://medium.com/@apechkurov/request-id-tracing-in-node-js-applications-c517c7dab62d) pass traceId
+    - [x] Nodejs [cls](https://medium.com/@apechkurov/request-id-tracing-in-node-js-applications-c517c7dab62d) pass traceId
     - [ ] Service add child span
     - [x] HTTP
     - [x] Grpc
     - [x] Mongodb
-    - [ ] Redis
+    - [x] Redis
     - [x] Multi service pass traceId
 - [ ] Logging
 - [ ] Metrics

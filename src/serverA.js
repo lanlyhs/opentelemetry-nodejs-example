@@ -7,7 +7,9 @@ const express = require("express");
 const { ChannelCredentials } = require("@grpc/grpc-js");
 const { GreeterClient } = require("npm-grpc-gen");
 const { promisify } = require("util");
+const Redis = require("ioredis");
 const app = express();
+const redis = new Redis();
 
 app.get("/", (req, res) => {
 	res.json("Hello World");
@@ -18,10 +20,16 @@ app.get("/date", (req, res) => {
 });
 
 app.get("/grpc", async (req, res) => {
+	const GRPC_CACHE_KEY = "grpc_cache";
 	try {
-		const client = new GreeterClient(`localhost:8081`, ChannelCredentials.createInsecure());
-		let result = promisify(client.sayHello.bind(client))({ name: "Lan" });
-		res.send(result);
+		let resultCache = await redis.get(GRPC_CACHE_KEY);
+		if (!resultCache) {
+			const client = new GreeterClient(`localhost:8081`, ChannelCredentials.createInsecure());
+			let result = await promisify(client.sayHello.bind(client))({ name: "Lan" });
+			redis.set(GRPC_CACHE_KEY, JSON.stringify(result), "EX", 2);
+		}
+		resultCache = await redis.get(GRPC_CACHE_KEY);
+		res.send(resultCache);
 		return;
 	} catch (error) {
 		res.send(error);
