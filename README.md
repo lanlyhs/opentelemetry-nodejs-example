@@ -13,7 +13,18 @@
 
 ## Quick Start
 
-[Jaeger UI](http://localhost:16686/)
+```sh
+# start serverA
+node serverA.js
+
+# start serverB
+node serverB.js
+
+# Call http api
+curl http://localhost:8080/grpc
+
+# Visit Jaeger UI http://localhost:16686/
+```
 
 ## References
 
