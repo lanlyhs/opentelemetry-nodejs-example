@@ -1,6 +1,6 @@
 "use strict";
 
-require('./tracer')('serverB');
+require('./tracing')('serverB');
 
 const { Server, ServerCredentials } = require("@grpc/grpc-js");
 const { GreeterService, HelloReply } = require("npm-grpc-gen");

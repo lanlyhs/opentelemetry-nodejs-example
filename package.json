@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lanlyhs/opentelemetry-nodejs-example.git"
@@ -18,16 +17,12 @@
   "homepage": "https://github.com/lanlyhs/opentelemetry-nodejs-example#readme",
   "dependencies": {
     "@grpc/grpc-js": "^1.6.3",
-    "@opentelemetry/api": "^1.0.2",
-    "@opentelemetry/exporter-jaeger": "0.25.0",
-    "@opentelemetry/instrumentation": "0.25.0",
-    "@opentelemetry/instrumentation-express": "^0.25.0",
-    "@opentelemetry/instrumentation-grpc": "^0.27.0",
-    "@opentelemetry/instrumentation-http": "^0.25.0",
-    "@opentelemetry/resources": "0.25.0",
-    "@opentelemetry/sdk-trace-base": "0.25.0",
-    "@opentelemetry/sdk-trace-node": "0.25.0",
-    "@opentelemetry/semantic-conventions": "0.25.0",
+    "@opentelemetry/api": "^1.0.4",
+    "@opentelemetry/auto-instrumentations-node": "^0.28.0",
+    "@opentelemetry/exporter-jaeger": "^1.0.1",
+    "@opentelemetry/resources": "^1.0.1",
+    "@opentelemetry/sdk-node": "^0.27.0",
+    "@opentelemetry/semantic-conventions": "^1.0.1",
     "express": "^4.17.3",
     "npm-grpc-gen": "0.0.3"
   }
