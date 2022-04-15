@@ -5,7 +5,7 @@
     - [ ] Service add child span
     - [x] HTTP
     - [x] Grpc
-    - [ ] Mongodb
+    - [x] Mongodb
     - [ ] Redis
     - [x] Multi service pass traceId
 - [ ] Logging
@@ -14,11 +14,8 @@
 ## Quick Start
 
 ```sh
-# start serverA
-node serverA.js
-
-# start serverB
-node serverB.js
+# start serverA and serverB
+npm run start
 
 # Call http api
 curl http://localhost:8080/grpc

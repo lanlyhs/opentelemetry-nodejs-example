@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "concurrently 'npm run serverA' 'npm run serverB'",
+    "serverA": "node ./src/serverA.js",
+    "serverB": "node ./src/serverB.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lanlyhs/opentelemetry-nodejs-example.git"
@@ -24,6 +28,10 @@
     "@opentelemetry/sdk-node": "^0.27.0",
     "@opentelemetry/semantic-conventions": "^1.0.1",
     "express": "^4.17.3",
+    "mongodb": "^4.5.0",
     "npm-grpc-gen": "0.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0"
   }
 }

@@ -1,6 +1,6 @@
 "use strict";
 
-require('./tracing')('serverA');
+require('./lib/tracing')('serverA');
 
 const PORT = process.env.PORT || "8080";
 const express = require("express");

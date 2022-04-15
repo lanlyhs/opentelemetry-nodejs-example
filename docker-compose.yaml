@@ -21,3 +21,8 @@ services:
       - "16686:16686"
       - "14268:14268"
       - "14250"
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
