@@ -1,15 +1,16 @@
 # OpenTelemetry Nodejs Example
 
-- [ ] Tracing
+- [x] [Tracing](https://opentelemetry.io/docs/reference/specification/trace/api/)
     - [x] Nodejs [cls](https://medium.com/@apechkurov/request-id-tracing-in-node-js-applications-c517c7dab62d) pass traceId
-    - [ ] Service add child span
     - [x] HTTP
     - [x] Grpc
     - [x] Mongodb
     - [x] Redis
     - [x] Multi service pass traceId
-- [ ] Logging
-- [ ] Metrics
+- ~~Logging~~
+  - [WIP](https://opentelemetry.io/docs/reference/specification/logs/overview/)
+- ~~Metrics~~
+  - [WIP](https://opentelemetry.io/docs/reference/specification/metrics/)
 
 ## Quick Start
 
