@@ -1,11 +1,13 @@
 "use strict";
 
+require('dotenv').config()
 require('./lib/tracing')('serverB');
 
 const { Server, ServerCredentials } = require("@grpc/grpc-js");
 const { GreeterService, HelloReply } = require("npm-grpc-gen");
 const { promisify } = require("util");
 const mongoExampleCol = require("./lib/mongo");
+const GRPC_PORT = process.env.GRPC_PORT;
 
 const server = new Server();
 
@@ -34,6 +36,6 @@ const impl = {
 server.addService(GreeterService, impl);
 
 (async function () {
-    await promisify(server.bindAsync.bind(server))('localhost:8081', ServerCredentials.createInsecure())
+    await promisify(server.bindAsync.bind(server))(`localhost:${GRPC_PORT}`, ServerCredentials.createInsecure())
     server.start();
 })()

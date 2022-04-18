@@ -18,11 +18,14 @@
 # run instrumentations jaeger mongodb redis
 docker-compose up
 
+# set env variable
+cp .env.example .env
+
 # start serverA and serverB
 npm run start
 
 # Call http api
-curl http://localhost:8080/grpc
+curl http://localhost:3000/grpc
 
 # Visit tracing in Jaeger UI http://localhost:16686/
 ```
