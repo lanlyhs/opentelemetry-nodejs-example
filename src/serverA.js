@@ -1,7 +1,6 @@
 "use strict";
 
 require('dotenv').config()
-require('./lib/tracing')('serverA');
 
 const express = require("express");
 const { ChannelCredentials } = require("@grpc/grpc-js");

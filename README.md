@@ -11,6 +11,7 @@
   - [WIP](https://opentelemetry.io/docs/reference/specification/logs/overview/)
 - ~~Metrics~~
   - [WIP](https://opentelemetry.io/docs/reference/specification/metrics/)
+- [x] Non-intrusive
 
 ## Quick Start
 

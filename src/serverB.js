@@ -1,7 +1,6 @@
 "use strict";
 
 require('dotenv').config()
-require('./lib/tracing')('serverB');
 
 const { Server, ServerCredentials } = require("@grpc/grpc-js");
 const { GreeterService, HelloReply } = require("npm-grpc-gen");
