@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently 'npm run serverA' 'npm run serverB'",
-    "serverA": "SERVICE_NAME=serverA node -r ./tracing.js ./src/serverA.js",
-    "serverB": "SERVICE_NAME=serverB node -r ./tracing.js ./src/serverB.js"
+    "serverA": "JAEGER_ENDPOINT=http://localhost:14268/api/traces SERVICE_NAME=serverA node -r ./tracing.js ./src/serverA.js",
+    "serverB": "JAEGER_ENDPOINT=http://localhost:14268/api/traces SERVICE_NAME=serverB node -r ./tracing.js ./src/serverB.js"
   },
   "repository": {
     "type": "git",
